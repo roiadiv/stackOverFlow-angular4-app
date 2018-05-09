@@ -1,0 +1,24 @@
+.myContainer{
+	background: #f7f7f7;
+	width: 100%;
+	margin: 0px auto; /*center the div element*/
+}
+
+
+.outlineStyleElm{
+  outline-style:none !important;
+  box-shadow:none !important;
+}
+
+.outlineElm :active, .outlineElm:focus{
+  outline:0px !important;
+  -webkit-appearance:none !important;
+}
+
+.borderBtn{
+  border-radius: 0 !important;
+}
+
+.example-h2 {
+  margin: 10px;
+}

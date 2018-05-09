@@ -1,0 +1,85 @@
+  .chipMat{
+    max-width: 33%;
+    float: left;
+  }
+
+  .result-row{
+    margin-bottom: 3%;
+    margin-top: 3%;
+    border-bottom: solid 2.8vh #d0c3c3;
+    border-top: solid 2.8vh #d0c3c3;
+    border-radius: 26vh;
+  }
+
+  .first-result-col{
+    border-radius: 33px;
+    background: #000000c7;
+    margin-right: 6%;
+
+  }
+
+  .sec-result-col{
+    background: #4ca2ff;
+    padding: 2%;
+    box-shadow: -14px 0px;
+    border-left: 2vw solid #d0c3c3;
+    border-top-left-radius: 75px;
+
+
+  }
+  .mat-list .mat-list-item .mat-line:nth-child(n+2), .mat-nav-list .mat-list-item .mat-line:nth-child(n+2), .mat-selection-list .mat-list-item .mat-line:nth-child(n+2){
+  color :#b3a4a4;
+}
+
+p.rep{
+  background: #2f7dc1;
+  border-radius: 10px;
+}
+
+.rep{
+  color :#b3a4a4;
+}
+
+  .radCol{
+    border-top-right-radius: 90px;
+    border-bottom-right-radius: 90px;
+  }
+
+  img{
+    border-radius: 43px;
+  }
+
+  label{
+    font-weight: bold;
+    color : white;
+    margin-right: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+  .name{
+    background: #ffecec;
+    border-radius: 10px;
+
+  }
+
+  .barPage{
+    background:  steelblue;
+  }
+
+  .outlineStyleElm{
+    outline-style:none !important;
+    box-shadow:none !important;
+  }
+  
+  .outlineElm :active, .outlineElm:focus{
+    outline:0px !important;
+    -webkit-appearance:none !important;
+  }
+  
+  .linkFilterUser {
+    cursor: pointer !important;
+  }
+
+ .curpage{
+   color: #b1b2b3;
+ }

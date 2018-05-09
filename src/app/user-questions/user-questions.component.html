@@ -1,0 +1,62 @@
+   <ng-template #noQuestions>
+      <h1> can't find questions </h1>
+    </ng-template>
+    
+    <div *ngIf="!returnedWithEmptyResults; else noQuestions;"></div>
+   <mat-list>
+      <div class="row result-row" *ngFor="let item of userQuestions">
+        <div class="offset-1 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-6 first-result-col">
+          <mat-list-item>
+            <p mat-line>
+              <a href={{item.link}} target="_blank">{{item.title}} </a>
+            </p>
+            <p mat-line>
+              <label>Score:</label>{{item.score}} </p>
+            <p mat-line>
+              <label>Answer Count:</label>{{item.answer_count}} </p>
+            <p mat-line>
+              <label>View Count:</label>{{item.view_count}} </p>
+            <p mat-line>
+              <label>Creation Date:</label>{{item.creation_date*1000 | date:'yyyy-MM-dd'}} </p>
+            <p mat-line>
+              <mat-chip-list class="mat-chip-list-stacked text-left">
+                <mat-chip *ngFor="let chip of item.tags" selected="true" color="primary" class="chipMat">
+                  {{chip}}
+                </mat-chip>
+              </mat-chip-list>
+            </p>
+          </mat-list-item>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 sec-result-col mr-3 text-center">
+          <p mat-line class="name">
+            <a routerLink="{{'/uq/' + item.owner.user_id}}"> {{item.owner.display_name}} </a>
+          </p>
+          <img src={{item.owner.profile_image}} alt="">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-2 radCol sec-result-col text-center">
+          <p mat-line class="name mt-4">
+            <a href={{item.owner.link}} target="_blank"> Owner profile</a>
+          </p>
+          <p class="rep">
+            <label>Reputation:</label>{{item.owner.reputation}}</p>
+        </div>
+      </div>
+    </mat-list>
+
+    <!-- <mat-toolbar class="barPage" *ngIf="isDisplayResults()">
+        <div class="grid w-100">
+        <div class="row">
+          <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1 col-1 mx-auto">
+            <button type="button" class="btn btn-info outlineStyleElm" (click)="toPrevPage()">prev</button>
+          </div>
+          <div class="col">
+            <p class="text-center curpage"> {{curPage}} </p>
+          </div>
+          <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1 col-1 mx-auto">
+            <button type="button" class="btn btn-info outlineStyleElm outlineElm" (click)="toNextPage()">next</button>
+          </div>
+        </div>
+      </div>
+     
+    </mat-toolbar> -->
+    

@@ -1,0 +1,44 @@
+<div class="grid p-2">
+  <div class="row">
+    <div class="col-8">
+      <div class="myContainer">
+        <form>
+          <div class="input-group">
+            <input [formControl]="searchInputFormCtrl" type="text" class="form-control outlineStyleElm outlineElm" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-info outlineStyleElm borderBtn" (click)="onSearchQuery()">Search</button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-1">
+      <!-- filter slider -->
+      <section class="slider-section ">
+        <mat-slide-toggle #slide 
+        class="mx-auto"
+        [formControl]="filterSliderFormCtrl" 
+        [color]="color" 
+        (change)="onToggleFilterSilder(slide.checked)">
+        </mat-slide-toggle>
+      </section>
+    </div>
+
+    <div class="col-3">
+      <div class="myContainer">
+        <form>
+          <div class="input-group">
+            <input [formControl]="filterInputFormCtrl" type="text" class="form-control outlineElm outlineStyleElm" placeholder="Filter by ...">
+            <span class="input-group-btn">
+              <button [disabled]="!filterBtnState" type="button" class="btn btn-info outlineStyleElm borderBtn" (click)="onFilterClick()">Filter</button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

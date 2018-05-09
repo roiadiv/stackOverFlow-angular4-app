@@ -1,0 +1,11 @@
+h1{
+	text-align: center;
+	color : white;
+	font-weight: normal;
+	background: steelblue;
+	margin: 0;
+	text-transform: uppercase;
+	line-height: 1.4;
+    padding: 20px 0; 
+}
+
